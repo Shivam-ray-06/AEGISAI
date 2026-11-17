@@ -1,0 +1,58 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: aegisai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: aegisai
+      POSTGRES_USER: aegisai
+      POSTGRES_PASSWORD: aegisai_secure_pass_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - aegisai_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aegisai"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Java Spring Boot Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aegisai-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: aegisai
+      DB_USER: aegisai
+      DB_PASSWORD: aegisai_secure_pass_2026
+      STORAGE_BASE_DIR: /storage
+      AI_SERVICE_URL: http://host.docker.internal:8000
+    volumes:
+      - ./storage:/storage
+
+  # Frontend Dashboard
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: aegisai-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  aegisai_pgdata:

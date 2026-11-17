@@ -1,0 +1,3020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEGISAI Incident Dossier — INC-F367D0B8</title>
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --card-bg: #141b26;
+            --border-color: #263345;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-cyan: #00d2ff;
+            --critical-red: #ff3b30;
+            --warning-amber: #ff9500;
+            --success-green: #34c759;
+        }
+        @media print {
+            body { background: #fff !important; color: #000 !important; }
+            .card { border: 1px solid #ccc !important; background: #fafafa !important; color: #000 !important; }
+            .no-print { display: none !important; }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin: 0;
+            padding: 30px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-cyan);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .brand {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--accent-cyan);
+        }
+        .subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .badge {
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge-critical { background: rgba(255, 59, 48, 0.2); color: var(--critical-red); border: 1px solid var(--critical-red); }
+        .badge-warning { background: rgba(255, 149, 0, 0.2); color: var(--warning-amber); border: 1px solid var(--warning-amber); }
+        .badge-green { background: rgba(52, 199, 89, 0.2); color: var(--success-green); border: 1px solid var(--success-green); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .card h4 { margin: 0 0 8px 0; font-size: 12px; color: var(--text-secondary); text-transform: uppercase; }
+        .card .value { font-size: 22px; font-weight: bold; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+        th {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--accent-cyan);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .disclaimer-box {
+            margin-top: 35px;
+            padding: 18px;
+            background: rgba(255, 149, 0, 0.08);
+            border: 1px solid var(--warning-amber);
+            border-radius: 6px;
+            font-size: 12px;
+            color: #d1d5db;
+        }
+        .print-btn {
+            background: var(--accent-cyan);
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">Print / Save as PDF</button>
+
+    <div class="header">
+        <div>
+            <div class="brand">AEGISAI :: EMERGENCY INCIDENT DOSSIER</div>
+            <div class="subtitle">Artificial Emergency Guidance & Intelligent Surveillance using AI</div>
+        </div>
+        <div>
+            <span class="badge badge-critical">PENDING_VERIFICATION</span>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h4>Incident ID</h4>
+            <div class="value" style="color: var(--accent-cyan); font-size: 18px;">INC-F367D0B8</div>
+        </div>
+        <div class="card">
+            <h4>Event Timestamp</h4>
+            <div class="value">1.9s</div>
+        </div>
+        <div class="card">
+            <h4>Detection Confidence</h4>
+            <div class="value">96.0%</div>
+        </div>
+        <div class="card">
+            <h4>Vehicles / Pedestrians</h4>
+            <div class="value">300 / 13</div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top: 0; color: var(--accent-cyan);">Video Telemetry & Source Metadata</h3>
+        <table style="width: 100%;">
+            <tr><td><strong>Source Video File</strong></td><td>VID-C5CE7EE4.mp4</td><td><strong>Duration</strong></td><td>64.07s</td></tr>
+            <tr><td><strong>Resolution</strong></td><td>478x850</td><td><strong>FPS</strong></td><td>30.00</td></tr>
+            <tr><td><strong>Analysis Model</strong></td><td>YOLOv8 + ByteTrack (PyTorch MPS)</td><td><strong>Generated On</strong></td><td>2026-11-17T23:11:43.909385</td></tr>
+        </table>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top: 0; color: var(--accent-cyan);">Vehicle Intelligence & Damage Profile</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>Type</th>
+                    <th>Collision Involvement</th>
+                    <th>Confidence</th>
+                    <th>Damage Assessment</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><strong>V-001</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>56%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 60.0% Impact Deformation (43.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-002</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>69%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 71.0% Impact Deformation (51.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-003</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>53%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 65.7% Impact Deformation (47.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-004</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>60%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 40.9% Impact Deformation (29.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-005</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>54%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 41.5% Impact Deformation (29.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-006</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 34.5% Impact Deformation (24.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-007</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 52.0% Impact Deformation (37.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-008</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 46.1% Impact Deformation (25.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-009</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>70%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 63.4% Impact Deformation (45.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-010</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-011</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-012</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-013</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 63.0% Impact Deformation (45.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-014</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>49%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 65.4% Impact Deformation (47.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-015</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>56%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-016</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>55%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-017</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 28.3% Impact Deformation (15.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-018</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>47%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-019</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-020</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 45.4% Impact Deformation (32.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-021</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-022</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-023</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-024</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>46%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 53.6% Impact Deformation (38.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-025</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-026</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-027</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-028</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>28%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-029</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-030</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 45.6% Impact Deformation (32.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-031</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 59.7% Impact Deformation (38.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-032</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 73.4% Impact Deformation (52.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-033</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-034</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>48%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-035</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-036</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>56%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-037</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-038</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-039</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-040</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-041</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>49%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 39.3% Impact Deformation (28.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-042</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>41%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 57.7% Impact Deformation (41.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-043</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 29.7% Impact Deformation (16.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-044</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 42.5% Impact Deformation (23.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-045</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 58.0% Impact Deformation (37.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-046</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-047</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-048</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>55%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 60.8% Impact Deformation (43.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-049</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-050</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-051</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-052</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-053</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>59%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 57.5% Impact Deformation (41.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-054</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>65%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-055</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 80.8% Impact Deformation (52.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-056</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 29.6% Impact Deformation (21.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-057</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>53%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-058</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>53%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-059</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 42.2% Impact Deformation (30.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-060</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-061</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>49%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 36.8% Impact Deformation (26.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-062</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 54.5% Impact Deformation (30.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-063</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-064</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-065</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 74.3% Impact Deformation (40.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-066</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>59%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-067</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 42.8% Impact Deformation (30.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-068</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-069</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-070</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-071</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>52%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 58.9% Impact Deformation (42.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-072</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>63%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 40.8% Impact Deformation (29.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-073</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>50%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-074</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 54.2% Impact Deformation (39.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-075</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-076</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-077</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>72%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 55.1% Impact Deformation (39.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-078</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>60%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 55.1% Impact Deformation (35.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-079</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-080</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 49.9% Impact Deformation (35.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-081</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 42.6% Impact Deformation (23.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-082</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-083</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-084</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>53%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 58.1% Impact Deformation (41.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-085</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>75%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 43.9% Impact Deformation (31.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-086</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 49.9% Impact Deformation (27.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-087</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 62.5% Impact Deformation (40.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-088</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 57.6% Impact Deformation (31.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-089</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-090</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-091</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 57.1% Impact Deformation (31.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-092</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>63%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 56.2% Impact Deformation (40.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-093</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>53%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 32.8% Impact Deformation (23.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-094</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-095</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>41%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 35.6% Impact Deformation (25.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-096</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 59.7% Impact Deformation (38.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-097</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>60%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-098</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-099</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-100</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>74%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-101</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-102</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-103</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>49%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-104</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>59%</td>
+                    <td>Rear Bumper & Trunk Structure: 54.9% Impact Deformation (39.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-105</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-106</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 38.4% Impact Deformation (21.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-107</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>50%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-108</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 43.3% Impact Deformation (28.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-109</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-110</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-111</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>76%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 52.8% Impact Deformation (38.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-112</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>52%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 61.0% Impact Deformation (43.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-113</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-114</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-115</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 45.1% Impact Deformation (32.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-116</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>55%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-117</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-118</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-119</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>70%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-120</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>78%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-121</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-122</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>48%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-123</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-124</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>69%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 55.5% Impact Deformation (40.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-125</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>55%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-126</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>78%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-127</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>52%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 63.5% Impact Deformation (45.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-128</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-129</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>86%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-130</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-131</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 27.6% Impact Deformation (19.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-132</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-133</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>64%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 59.4% Impact Deformation (42.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-134</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>65%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 66.7% Impact Deformation (48.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-135</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-136</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-137</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 51.6% Impact Deformation (28.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-138</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>59%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-139</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>84%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-140</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>53%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-141</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>55%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 75.9% Impact Deformation (49.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-142</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 43.0% Impact Deformation (31.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-143</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>56%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-144</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>64%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 84.3% Impact Deformation (60.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-145</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>68%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 61.9% Impact Deformation (44.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-146</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>76%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-147</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>48%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-148</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>49%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-149</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>45%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-150</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>51%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-151</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-152</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-153</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-154</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>71%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 66.6% Impact Deformation (48.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-155</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-156</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-157</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-158</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>73%</td>
+                    <td>Rear Bumper & Trunk Structure: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-159</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>50%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-160</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-161</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>47%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-162</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>57%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-163</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>57%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 57.6% Impact Deformation (41.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-164</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>69%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-165</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>65%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 33.0% Impact Deformation (23.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-166</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>57%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 28.2% Impact Deformation (20.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-167</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>52%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 53.9% Impact Deformation (38.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-168</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 31.1% Impact Deformation (22.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-169</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 31.5% Impact Deformation (17.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-170</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-171</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>68%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 86.0% Impact Deformation (61.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-172</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>48%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-173</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 71.1% Impact Deformation (39.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-174</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>29%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-175</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>41%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 56.7% Impact Deformation (31.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-176</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-177</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>53%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-178</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 47.1% Impact Deformation (33.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-179</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-180</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-181</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>51%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 50.5% Impact Deformation (36.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-182</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-183</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 51.2% Impact Deformation (36.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-184</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 33.2% Impact Deformation (23.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-185</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 79.5% Impact Deformation (57.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-186</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-187</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 43.5% Impact Deformation (23.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-188</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>51%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 54.3% Impact Deformation (39.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-189</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>48%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 54.6% Impact Deformation (30.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-190</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-191</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>41%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 41.3% Impact Deformation (29.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-192</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-193</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 30.4% Impact Deformation (21.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-194</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 41.3% Impact Deformation (26.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-195</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-196</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 51.5% Impact Deformation (33.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-197</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-198</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>51%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 39.9% Impact Deformation (28.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-199</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-200</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-201</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-202</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>47%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 61.3% Impact Deformation (33.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-203</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 70.9% Impact Deformation (39.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-204</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-205</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-206</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 59.8% Impact Deformation (43.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-207</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>58%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-208</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 50.1% Impact Deformation (27.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-209</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-210</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 30.4% Impact Deformation (21.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-211</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>43%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-212</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-213</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 26.0% Impact Deformation (18.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-214</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 49.1% Impact Deformation (35.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-215</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>46%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 66.5% Impact Deformation (47.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-216</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-217</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 55.5% Impact Deformation (30.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-218</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>47%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 36.4% Impact Deformation (20.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-219</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-220</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>46%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 43.5% Impact Deformation (23.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-221</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>57%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-222</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-223</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-224</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-225</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-226</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-227</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>47%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-228</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-229</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>41%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 60.3% Impact Deformation (39.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-230</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-231</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 66.9% Impact Deformation (43.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-232</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-233</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-234</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>60%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 59.1% Impact Deformation (42.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-235</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-236</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>54%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-237</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>62%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 77.5% Impact Deformation (42.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-238</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 35.8% Impact Deformation (25.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-239</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>28%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-240</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-241</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 34.6% Impact Deformation (24.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-242</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 52.8% Impact Deformation (29.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-243</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-244</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 55.7% Impact Deformation (40.1 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-245</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>48%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 25.9% Impact Deformation (18.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-246</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-247</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-248</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-249</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-250</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 47.7% Impact Deformation (34.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-251</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>41%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 34.0% Impact Deformation (18.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-252</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>63%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-253</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-254</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-255</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>74%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-256</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-257</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Rear Bumper & Trunk Structure: 55.3% Impact Deformation (39.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-258</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>56%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 58.4% Impact Deformation (38.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-259</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>57%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 46.7% Impact Deformation (33.6 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-260</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>50%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-261</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 31.7% Impact Deformation (22.8 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-262</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 53.4% Impact Deformation (29.4 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-263</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-264</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-265</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-266</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>29%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-267</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-268</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>61%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 54.9% Impact Deformation (39.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-269</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-270</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-271</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 51.0% Impact Deformation (36.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-272</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-273</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>51%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 58.4% Impact Deformation (42.0 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-274</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-275</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>76%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-276</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-277</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-278</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-279</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-280</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-281</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>76%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-282</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>68%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 57.6% Impact Deformation (41.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-283</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>57%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-284</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>68%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-285</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>60%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 62.9% Impact Deformation (45.3 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-286</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 42.4% Impact Deformation (30.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-287</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>56%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-288</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>86%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-289</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-290</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>54%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 55.1% Impact Deformation (39.7 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-291</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>64%</td>
+                    <td>Driver-Side Front Quarter Panel & A-Pillar: 62.3% Impact Deformation (44.9 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-292</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-293</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 55.4% Impact Deformation (30.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-294</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Passenger-Side Flank & B-Pillar: 22.5% Impact Deformation (16.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-295</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>29%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-296</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 54.9% Impact Deformation (39.5 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-297</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>82%</td>
+                    <td>Frontal Bumper & Radiator Crumple Zone: 86.4% Impact Deformation (62.2 cm estimated crush depth)</td>
+                    <td>AUTOMATED_QUANTIFICATION_VERIFIED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-298</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>51%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-299</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>54%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-300</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected — Hull integrity nominal (100%)</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top: 0; color: var(--accent-cyan);">Pedestrian & Victim Intelligence</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Person ID</th>
+                    <th>Confidence</th>
+                    <th>Proximity Zone</th>
+                    <th>Movement Status</th>
+                    <th>Review Warning</th>
+                    <th>Medical Disclaimer</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><strong>P-001</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-002</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-003</strong></td>
+                    <td>39%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-004</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-005</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-006</strong></td>
+                    <td>60%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-007</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-008</strong></td>
+                    <td>43%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-009</strong></td>
+                    <td>39%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-010</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-011</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-012</strong></td>
+                    <td>30%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-013</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="disclaimer-box">
+        <h4 style="margin: 0 0 6px 0; color: var(--warning-amber); text-transform: uppercase;">Ethical & Engineering Safety Limitations</h4>
+        <p style="margin: 0;">
+            This document is generated by AEGISAI automated experimental computer vision models. 
+            <strong>YOLO detections and kinematic estimations do not establish legal liability or confirmed medical diagnostics.</strong>
+            Ordinary CCTV video cannot determine consciousness, breathing, or internal trauma. All candidate flags must undergo independent human forensic review and certified emergency medical response verification before action.
+        </p>
+    </div>
+</body>
+</html>

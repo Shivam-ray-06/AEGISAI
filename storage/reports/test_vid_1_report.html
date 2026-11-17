@@ -1,0 +1,4235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEGISAI Incident Dossier — INC-8A0914DC</title>
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --card-bg: #141b26;
+            --border-color: #263345;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-cyan: #00d2ff;
+            --critical-red: #ff3b30;
+            --warning-amber: #ff9500;
+            --success-green: #34c759;
+        }
+        @media print {
+            body { background: #fff !important; color: #000 !important; }
+            .card { border: 1px solid #ccc !important; background: #fafafa !important; color: #000 !important; }
+            .no-print { display: none !important; }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin: 0;
+            padding: 30px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-cyan);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .brand {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--accent-cyan);
+        }
+        .subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .badge {
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge-critical { background: rgba(255, 59, 48, 0.2); color: var(--critical-red); border: 1px solid var(--critical-red); }
+        .badge-warning { background: rgba(255, 149, 0, 0.2); color: var(--warning-amber); border: 1px solid var(--warning-amber); }
+        .badge-green { background: rgba(52, 199, 89, 0.2); color: var(--success-green); border: 1px solid var(--success-green); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .card h4 { margin: 0 0 8px 0; font-size: 12px; color: var(--text-secondary); text-transform: uppercase; }
+        .card .value { font-size: 22px; font-weight: bold; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+        th {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--accent-cyan);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .disclaimer-box {
+            margin-top: 35px;
+            padding: 18px;
+            background: rgba(255, 149, 0, 0.08);
+            border: 1px solid var(--warning-amber);
+            border-radius: 6px;
+            font-size: 12px;
+            color: #d1d5db;
+        }
+        .print-btn {
+            background: var(--accent-cyan);
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">Print / Save as PDF</button>
+
+    <div class="header">
+        <div>
+            <div class="brand">AEGISAI :: EMERGENCY INCIDENT DOSSIER</div>
+            <div class="subtitle">Artificial Emergency Guidance & Intelligent Surveillance using AI</div>
+        </div>
+        <div>
+            <span class="badge badge-critical">PENDING_VERIFICATION</span>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h4>Incident ID</h4>
+            <div class="value" style="color: var(--accent-cyan); font-size: 18px;">INC-8A0914DC</div>
+        </div>
+        <div class="card">
+            <h4>Event Timestamp</h4>
+            <div class="value">0.08s</div>
+        </div>
+        <div class="card">
+            <h4>Detection Confidence</h4>
+            <div class="value">96.0%</div>
+        </div>
+        <div class="card">
+            <h4>Vehicles / Pedestrians</h4>
+            <div class="value">320 / 128</div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top: 0; color: var(--accent-cyan);">Video Telemetry & Source Metadata</h3>
+        <table style="width: 100%;">
+            <tr><td><strong>Source Video File</strong></td><td>accident_vid_1.mp4</td><td><strong>Duration</strong></td><td>23.56s</td></tr>
+            <tr><td><strong>Resolution</strong></td><td>816x464</td><td><strong>FPS</strong></td><td>60.11</td></tr>
+            <tr><td><strong>Analysis Model</strong></td><td>YOLOv8 + ByteTrack (PyTorch MPS)</td><td><strong>Generated On</strong></td><td>2026-11-17T20:43:28.058864</td></tr>
+        </table>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top: 0; color: var(--accent-cyan);">Vehicle Intelligence & Damage Profile</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>Type</th>
+                    <th>Collision Involvement</th>
+                    <th>Confidence</th>
+                    <th>Damage Assessment</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><strong>V-001</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>78%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-002</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>48%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-003</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>75%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-004</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>76%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-005</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>74%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-006</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-007</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>69%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-008</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>75%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-009</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-010</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-011</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>45%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-012</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-013</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-014</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>45%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-015</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-016</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-017</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-018</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>46%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-019</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-020</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-021</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-022</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>62%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-023</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-024</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-025</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-026</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-027</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-028</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-029</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>51%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-030</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-031</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-032</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-033</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-034</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-035</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-036</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-037</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-038</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>47%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-039</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-040</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-041</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-042</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-043</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-044</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>48%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-045</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-046</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>41%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-047</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-048</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-049</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-050</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>28%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-051</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-052</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-053</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>28%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-054</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-055</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-056</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-057</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-058</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-059</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>27%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-060</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-061</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-062</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-063</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-064</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-065</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-066</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>68%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-067</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-068</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-069</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>61%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-070</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-071</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-072</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>80%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-073</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>64%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-074</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-075</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-076</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-077</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-078</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-079</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-080</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>59%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-081</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-082</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-083</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-084</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-085</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>29%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-086</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-087</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-088</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-089</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-090</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-091</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>47%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-092</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-093</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-094</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-095</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-096</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-097</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-098</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-099</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-100</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>50%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-101</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>46%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-102</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-103</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-104</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-105</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-106</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-107</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-108</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-109</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-110</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-111</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-112</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-113</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-114</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-115</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-116</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-117</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-118</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-119</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-120</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-121</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-122</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>61%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-123</strong></td>
+                    <td>Bus</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-124</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-125</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>67%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-126</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-127</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>28%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-128</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>49%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-129</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-130</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-131</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-132</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-133</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-134</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-135</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-136</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>47%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-137</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>48%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-138</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>74%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-139</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-140</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-141</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-142</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>45%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-143</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-144</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-145</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-146</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>67%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-147</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-148</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>45%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-149</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-150</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-151</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-152</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-153</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-154</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-155</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-156</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-157</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-158</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-159</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-160</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-161</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-162</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-163</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-164</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-165</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>55%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-166</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-167</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-168</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-169</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>28%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-170</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-171</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>49%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-172</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-173</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-174</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-175</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>29%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-176</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-177</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-178</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-179</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>39%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-180</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>29%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-181</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-182</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-183</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-184</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-185</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-186</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-187</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-188</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-189</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-190</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-191</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-192</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-193</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-194</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-195</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>50%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-196</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>48%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-197</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-198</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>51%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-199</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-200</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-201</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-202</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>28%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-203</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-204</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-205</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-206</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-207</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-208</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-209</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-210</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-211</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-212</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-213</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-214</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-215</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-216</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-217</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-218</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-219</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-220</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-221</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>27%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-222</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-223</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-224</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-225</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-226</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-227</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-228</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-229</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-230</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-231</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-232</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>44%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-233</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-234</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-235</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-236</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-237</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-238</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-239</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-240</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-241</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-242</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-243</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-244</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-245</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>59%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-246</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-247</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-248</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>35%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-249</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-250</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-251</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>28%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-252</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-253</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>29%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-254</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>27%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-255</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>32%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-256</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-257</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-258</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>35%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-259</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-260</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>49%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-261</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>43%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-262</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>42%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-263</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-264</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>31%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-265</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>46%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-266</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-267</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-268</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-269</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>28%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-270</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-271</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-272</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-273</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-274</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-275</strong></td>
+                    <td>Truck</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>28%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-276</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-277</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-278</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-279</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>42%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-280</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-281</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-282</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>45%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-283</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-284</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>27%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-285</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-286</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-287</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>33%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-288</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>38%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-289</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>40%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-290</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-291</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-292</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-293</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-294</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-295</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-296</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-297</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>33%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-298</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-299</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-300</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-301</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-302</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>43%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-303</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>39%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-304</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>34%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-305</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>55%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-306</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>34%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-307</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>38%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-308</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-309</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>30%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-310</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-311</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>40%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-312</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>37%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-313</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>36%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-314</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>31%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-315</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>44%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-316</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-317</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>32%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-318</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>36%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-319</strong></td>
+                    <td>Motorcycle</td>
+                    <td><span class="badge badge-critical">INVOLVED</span></td>
+                    <td>30%</td>
+                    <td>Vehicle damage assessment unavailable — manual visual inspection required.</td>
+                    <td>MANUAL_REVIEW_REQUIRED</td>
+                </tr>
+
+                <tr>
+                    <td><strong>V-320</strong></td>
+                    <td>Car</td>
+                    <td><span class="badge badge-green">SAFE</span></td>
+                    <td>37%</td>
+                    <td>No visible damage detected</td>
+                    <td>VERIFIED_SAFE</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top: 0; color: var(--accent-cyan);">Pedestrian & Victim Intelligence</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Person ID</th>
+                    <th>Confidence</th>
+                    <th>Proximity Zone</th>
+                    <th>Movement Status</th>
+                    <th>Review Warning</th>
+                    <th>Medical Disclaimer</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><strong>P-001</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-002</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-003</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-004</strong></td>
+                    <td>44%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-005</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-006</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-007</strong></td>
+                    <td>39%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-008</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-009</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-010</strong></td>
+                    <td>47%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-011</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-012</strong></td>
+                    <td>44%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-013</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-014</strong></td>
+                    <td>46%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-015</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-016</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-017</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-018</strong></td>
+                    <td>45%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-019</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-020</strong></td>
+                    <td>49%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-021</strong></td>
+                    <td>30%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-022</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-023</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-024</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-025</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-026</strong></td>
+                    <td>47%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-027</strong></td>
+                    <td>37%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-028</strong></td>
+                    <td>54%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-029</strong></td>
+                    <td>44%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-030</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-031</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-032</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-033</strong></td>
+                    <td>46%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-034</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-035</strong></td>
+                    <td>49%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-036</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-037</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-038</strong></td>
+                    <td>46%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-039</strong></td>
+                    <td>49%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-040</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-041</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-042</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-043</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-044</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-045</strong></td>
+                    <td>39%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-046</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-047</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-048</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-049</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-050</strong></td>
+                    <td>29%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-051</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-052</strong></td>
+                    <td>30%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-053</strong></td>
+                    <td>37%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-054</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-055</strong></td>
+                    <td>46%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-056</strong></td>
+                    <td>46%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-057</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-058</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-059</strong></td>
+                    <td>48%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-060</strong></td>
+                    <td>64%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-061</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-062</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-063</strong></td>
+                    <td>37%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-064</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-065</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-066</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-067</strong></td>
+                    <td>47%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-068</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-069</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-070</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-071</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-072</strong></td>
+                    <td>47%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-073</strong></td>
+                    <td>43%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-074</strong></td>
+                    <td>39%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-075</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-076</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-077</strong></td>
+                    <td>31%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-078</strong></td>
+                    <td>39%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-079</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-080</strong></td>
+                    <td>37%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-081</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-082</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-083</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-084</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-085</strong></td>
+                    <td>45%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-086</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-087</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-088</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-089</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-090</strong></td>
+                    <td>41%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-091</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-092</strong></td>
+                    <td>30%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-093</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-094</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-095</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-096</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-097</strong></td>
+                    <td>27%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-098</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-099</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-100</strong></td>
+                    <td>28%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-101</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-102</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-103</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-104</strong></td>
+                    <td>45%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-105</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-106</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-107</strong></td>
+                    <td>62%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-108</strong></td>
+                    <td>34%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-109</strong></td>
+                    <td>38%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-110</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-111</strong></td>
+                    <td>36%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-112</strong></td>
+                    <td>37%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-113</strong></td>
+                    <td>69%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-114</strong></td>
+                    <td>40%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-115</strong></td>
+                    <td>47%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-116</strong></td>
+                    <td>43%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-117</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-118</strong></td>
+                    <td>30%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-119</strong></td>
+                    <td>51%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-120</strong></td>
+                    <td>35%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Tracking lost</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-121</strong></td>
+                    <td>33%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-122</strong></td>
+                    <td>42%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-123</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-124</strong></td>
+                    <td>66%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-125</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-126</strong></td>
+                    <td>37%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-127</strong></td>
+                    <td>32%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>P-128</strong></td>
+                    <td>29%</td>
+                    <td>Immediate Perimeter (<5m estimated)</td>
+                    <td>Movement detected</td>
+                    <td><span class="badge badge-warning">ALERT</span></td>
+                    <td>Unknown — immediate human emergency medical assessment required.</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="disclaimer-box">
+        <h4 style="margin: 0 0 6px 0; color: var(--warning-amber); text-transform: uppercase;">Ethical & Engineering Safety Limitations</h4>
+        <p style="margin: 0;">
+            This document is generated by AEGISAI automated experimental computer vision models. 
+            <strong>YOLO detections and kinematic estimations do not establish legal liability or confirmed medical diagnostics.</strong>
+            Ordinary CCTV video cannot determine consciousness, breathing, or internal trauma. All candidate flags must undergo independent human forensic review and certified emergency medical response verification before action.
+        </p>
+    </div>
+</body>
+</html>

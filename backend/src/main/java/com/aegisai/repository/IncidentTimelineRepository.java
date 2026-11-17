@@ -1,0 +1,11 @@
+package com.aegisai.repository;
+
+import com.aegisai.entity.IncidentTimeline;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+
+@Repository
+public interface IncidentTimelineRepository extends JpaRepository<IncidentTimeline, Long> {
+    List<IncidentTimeline> findByVideoJob_VideoIdOrderByTimestampSecondsAsc(String videoId);
+}
