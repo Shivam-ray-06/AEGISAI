@@ -196,12 +196,15 @@ public class VideoService {
             if (incidentsNode.isArray()) {
                 for (JsonNode inc : incidentsNode) {
                     String incId = inc.path("incidentId").asText();
+                    JsonNode invVehNode = inc.has("involvedVehicles") ? inc.path("involvedVehicles") : inc.path("involvedVehicleIds");
+                    JsonNode nearPedNode = inc.has("nearbyPedestrians") ? inc.path("nearbyPedestrians") : inc.path("nearbyPedestrianIds");
+
                     Incident incident = Incident.builder()
                             .incidentId(incId)
                             .videoJob(job)
                             .eventTimestamp(inc.path("eventTimestamp").asDouble(0.0))
-                            .involvedVehicles(objectMapper.writeValueAsString(inc.path("involvedVehicleIds")))
-                            .nearbyPedestrians(objectMapper.writeValueAsString(inc.path("nearbyPedestrianIds")))
+                            .involvedVehicles(invVehNode.isMissingNode() ? "[]" : objectMapper.writeValueAsString(invVehNode))
+                            .nearbyPedestrians(nearPedNode.isMissingNode() ? "[]" : objectMapper.writeValueAsString(nearPedNode))
                             .evidenceDetected(objectMapper.writeValueAsString(inc.path("evidenceDetected")))
                             .confidenceScore(inc.path("confidenceScore").asDouble(0.85))
                             .eventDescription(inc.path("eventDescription").asText())
